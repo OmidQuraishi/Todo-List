@@ -37,7 +37,7 @@ nav a {
 .search {
   display: flex;
   align-items: center;
-  width: 400px;
+  width: 300px;
 }
 .search input,
 .btn {
@@ -65,11 +65,13 @@ header {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 300px;
+  position: sticky;
+  top: 50px;
+  padding: 0 20px;
 }
 header .banner h1 {
   font-weight: 400;
