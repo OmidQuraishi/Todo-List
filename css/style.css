@@ -16,3 +16,42 @@ html,
 body {
   font-family: "Poppins", sans-serif;
 }
+a {
+  text-decoration: none;
+}
+/* navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary);
+  padding: 5px 10px;
+}
+nav a {
+  font-size: 25px;
+  color: var(--textLight);
+}
+nav .search {
+  display: flex;
+  align-items: center;
+  width: 400px;
+}
+nav .search input,
+.btn {
+  padding: 7px 5px;
+  border: none;
+  border-radius: 2px 0 0 2px;
+  outline: none;
+  background-color: var(--textLight);
+  color: var(--textLight);
+}
+nav .search input {
+  width: 100%;
+}
+nav .search .btn {
+  border-radius: 0 2px 2px 0;
+  border-color: var(--btn);
+  padding-inline: 20px;
+  background-color: var(--btn);
+}
+/* end navbar */
