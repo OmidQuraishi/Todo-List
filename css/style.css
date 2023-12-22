@@ -25,11 +25,12 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: var(--primary);
-  padding: 5px 10px;
+  padding: 10px 10px;
 }
 nav a {
-  font-size: 25px;
+  font-size: 20px;
   color: var(--textLight);
+  font-weight: 800;
 }
 nav .search {
   display: flex;
@@ -51,7 +52,7 @@ nav .search input {
 nav .search .btn {
   border-radius: 0 2px 2px 0;
   border-color: var(--btn);
-  padding-inline: 20px;
+  padding-inline: 30px;
   background-color: var(--btn);
 }
 /* end navbar */
