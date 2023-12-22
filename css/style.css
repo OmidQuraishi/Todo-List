@@ -26,33 +26,80 @@ nav {
   align-items: center;
   background-color: var(--primary);
   padding: 10px 10px;
+  position: sticky;
+  top: 0;
 }
 nav a {
   font-size: 20px;
   color: var(--textLight);
   font-weight: 800;
 }
-nav .search {
+.search {
   display: flex;
   align-items: center;
   width: 400px;
 }
-nav .search input,
+.search input,
 .btn {
   padding: 7px 5px;
   border: none;
   border-radius: 2px 0 0 2px;
   outline: none;
   background-color: var(--textLight);
-  color: var(--textLight);
 }
-nav .search input {
+.search input {
   width: 100%;
 }
-nav .search .btn {
+.search .btn {
   border-radius: 0 2px 2px 0;
   border-color: var(--btn);
   padding-inline: 30px;
   background-color: var(--btn);
+  color: var(--textLight);
 }
 /* end navbar */
+/* banner */
+header {
+  background-image: linear-gradient(to right, #0009, #0009),
+    url("../imgs/pexels-polina-kovaleva-5717479.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+header .banner h1 {
+  font-weight: 400;
+  color: var(--textLight);
+  padding: 10px 0;
+  text-align: center;
+}
+.banner h1 span {
+  font-weight: 700;
+}
+.form {
+  padding-top: 20px;
+  width: 100%;
+}
+.form input,
+.form .btn {
+  padding: 10px 10px;
+  font-size: 18px;
+}
+.form .btn {
+  padding-inline: 30px;
+}
+.form .btn {
+  color: var(--textLight);
+}
+.message {
+  color: red;
+  font-size: 15px;
+  padding: 5px 0;
+  display: inline-block;
+  opacity: 0;
+}
+/* end banner */
