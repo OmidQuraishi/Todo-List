@@ -73,6 +73,9 @@ header {
   top: 50px;
   padding: 0 20px;
 }
+header .banner {
+  width: 400px;
+}
 header .banner h1 {
   font-weight: 400;
   color: var(--textLight);
