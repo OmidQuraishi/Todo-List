@@ -2,8 +2,8 @@
 const addBtn = document.querySelector(".addBtn");
 const input = document.querySelector(".form input");
 const message = document.querySelector(".message");
-const taskMessage = document.querySelector(".task-length");
 let mark = document.querySelector(".task");
+
 const errors = [
   "Fill The Input",
   "Dont Write More Then 25 Character",
@@ -13,11 +13,13 @@ const errors = [
 // todos array
 let todos = [];
 todos = JSON.parse(localStorage.getItem("todos"));
+
 // error message
 function error(index) {
   message.textContent = errors[index];
   message.style.opacity = 1;
 }
+
 // add task event
 addBtn.addEventListener("click", function () {
   if (input.value.length == "") {
@@ -27,7 +29,6 @@ addBtn.addEventListener("click", function () {
   } else if (input.value.length < 3) {
     error(2);
   } else {
-    // todos.push(input.value);
     addTask();
     input.value = "";
     error();
@@ -54,8 +55,11 @@ function checkLocalStorage() {
   }
 }
 checkLocalStorage();
+
 // show task in webpage
 function showTask() {
+  const taskMessage = document.querySelector(".task-length");
+  taskMessage.textContent = todos.length;
   mark.querySelectorAll(".task-body").forEach((ele) => ele.remove());
   todos.forEach((ele, index) => {
     mark.innerHTML += `
