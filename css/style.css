@@ -148,4 +148,11 @@ section .task .task-body > i {
 section .task .task-body > i:hover {
   color: red;
 }
+section .task .task-title.deactive h1 {
+  text-decoration: line-through;
+  color: gray;
+}
+section .task .task-title i.deactive {
+  color: var(--btn);
+}
 /* end task section */

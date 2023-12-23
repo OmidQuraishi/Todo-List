@@ -2,6 +2,7 @@
 const addBtn = document.querySelector(".addBtn");
 const input = document.querySelector(".form input");
 const message = document.querySelector(".message");
+const taskMessage = document.querySelector(".task-length");
 let mark = document.querySelector(".task");
 const errors = [
   "Fill The Input",
@@ -55,16 +56,15 @@ function checkLocalStorage() {
 checkLocalStorage();
 // show task in webpage
 function showTask() {
-  //   mark.querySelectorAll("h1").forEach((ele) => ele.remove());
   mark.querySelectorAll(".task-body").forEach((ele) => ele.remove());
   todos.forEach((ele, index) => {
     mark.innerHTML += `
   <div class="task-body">
         <div class="task-title ${ele.states}">
-            <i class="fa fa-check" aria-hidden="true"></i>
+            <i class="fa fa-check ${ele.states}" onclick="checkTask(${index})" aria-hidden="true"></i>
             <h1>${ele.title}</h1>
         </div>
-        <i class="fa fa-trash ${ele.states}" aria-hidden="true"></i>
+        <i class="fa fa-trash ${ele.states} remove" onclick="removeTask(${index})" aria-hidden="true"></i>
   </div>
     `;
   });
@@ -72,7 +72,16 @@ function showTask() {
 showTask();
 
 // delete task
-function removeTask(index) {}
-
+function removeTask(index) {
+  todos.splice(index, 1);
+  localStorage.setItem("todos", JSON.stringify(todos));
+  todos = JSON.parse(localStorage.getItem("todos"));
+  showTask();
+}
 // change states task
-function checkTask(index) {}
+function checkTask(index) {
+  todos[index].states = "deactive";
+  localStorage.setItem("todos", JSON.stringify(todos));
+  todos = JSON.parse(localStorage.getItem("todos"));
+  showTask();
+}
