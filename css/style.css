@@ -60,7 +60,7 @@ nav a {
 /* end navbar */
 /* banner */
 header {
-  background-image: linear-gradient(to right, #0009, #0009),
+  background-image: linear-gradient(to right, #000000bb, #000000ca),
     url("../imgs/pexels-polina-kovaleva-5717479.jpg");
   background-position: center;
   background-size: cover;
@@ -98,10 +98,54 @@ header .banner h1 {
   color: var(--textLight);
 }
 .message {
-  color: red;
+  color: var(--textLight);
   font-size: 15px;
-  padding: 5px 0;
   display: inline-block;
   opacity: 0;
 }
+p {
+  padding: 5px 0;
+}
 /* end banner */
+/* task section */
+section {
+  display: flex;
+  justify-content: center;
+}
+section .task {
+  width: 400px;
+  padding: 10px 0;
+}
+section .task h1 {
+  text-align: center;
+  padding: 10px 0;
+}
+section .task .task-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary);
+  color: var(--textLight);
+  padding: 0 15px;
+  margin: 10px 0;
+}
+section .task .task-title {
+  display: flex;
+  align-items: center;
+}
+section .task .task-title i {
+  padding-right: 10px;
+  color: gray;
+  cursor: pointer;
+}
+section .task .task-title h1 {
+  font-size: 20px;
+}
+section .task .task-body > i {
+  color: #800303;
+  cursor: pointer;
+}
+section .task .task-body > i:hover {
+  color: red;
+}
+/* end task section */
